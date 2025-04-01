@@ -21,3 +21,11 @@ body {
     color: black;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+.Text {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    padding: 30px;
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
