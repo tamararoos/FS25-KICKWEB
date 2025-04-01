@@ -6,15 +6,15 @@
     <title>Document</title>
     <style>
       body {
-
         background-color: rgb(255, 238, 0);     
         overflow: hidden;
        }
+
       .grid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
-        gap: 2px;
+        gap: 3px;
         width: 100vw;
         height: 100vh;
         background-color: rgb(255, 238, 0);
@@ -31,6 +31,40 @@
         justify-content: center;
       }
 
+      .Objekt {
+       width: 200px;
+      height: 200px;
+      border-radius: 30%;
+      background-color: black;
+      opacity: 100;
+      display: flex;
+      animation: fadeIn 1s forwards;
+      animation-delay: 0s;
+      align-items: center;
+      justify-content: center;
+      grid-column: 4/5;
+      grid-row: 1/2;
+      place-self: center; /* Zentriert das Objekt innerhalb der Grid-Zelle */
+      
+}
+.Objekt :hover{
+ transition: all 1s ease; 
+ transform: scale(1.2);
+       width: 200px;
+      height: 200px;
+      border-radius: 30%;
+      background-color: black;
+      opacity: 100;
+      display: flex;
+      animation: fadeIn 1s forwards;
+      animation-delay: 0s;
+      align-items: center;
+      justify-content: center;
+      grid-column: 4/5;
+      grid-row: 1/2;
+      place-self: center; /* Zentriert das Objekt innerhalb der Grid-Zelle */
+
+}
  
 
       @keyframes fadeIn {
@@ -46,6 +80,9 @@
 
      /* Verzögerung für jeden Buchstaben */
      .letter:nth-child(1) {
+        animation-delay: 0.5s;}
+
+      .Objekt {
         animation-delay: 0.5s;
       }
       .letter:nth-child(2) {
@@ -77,21 +114,19 @@
       }
   
       .letter.N {
-  /*width: 100vw;*/
         grid-column: 1/4;
         grid-row: 1/2;
-        transition: all 1s ease;
       }
 
       .letter.N:hover path {
-        transition: 1s;
+        transition: all 1s ease;
         d: path(
           "M663.53,0v190.92h-83.91l-49.8-26.39v26.39H0V0h529.82l53.66,26.91V0h80.04Z"
         );
       }
 
       .letter.O-1 {
-        grid-column: 4/9;
+        grid-column: 5/9;
         grid-row: 1/2;
       }
 
@@ -188,15 +223,19 @@
         }
         /* Beispielhafte Platzierungen */
         .letter.N {
-          grid-column: 1/3;
+          grid-column: 1/4;
           grid-row: 1/2;
         }
+        .Objekt {
+    width: 100px;
+    height: 110px;
+  }
         .letter.O-1 {
           grid-column: 1/5;
           grid-row: 2/3;
         }
         .letter.M-1 {
-          grid-column: 1/4;
+          grid-column: 1/5;
           grid-row: 3/4;
         }
         .letter.O-2 {
@@ -224,7 +263,7 @@
           grid-row: 7/8;
         }
         .letter.M-2 {
-          grid-column: 1/4;
+          grid-column: 1/5;
           grid-row: 8/9;
         }
       }
@@ -237,10 +276,13 @@
             <path d="M213.75,0v190.92h-83.91l-49.8-26.39v26.39H0V0h80.04l53.66,26.91V0h80.04Z"/>
         </svg>
       </div>
+
+      <div class="Objekt"></div>
+
       <div class="letter O-1">
-        <svg id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1113.61 193.5">
-            <path d="M1110.98,40.47c-1.75-7.6-7.24-14.63-16.45-21.09-9.21-6.46-21.38-11.3-36.52-14.54-15.13-3.23-32.21-4.85-51.21-4.85-9.55,0-18.53.39-26.95,1.17H106.8c-20.03,0-37.57,1.71-52.63,5.13-15.06,3.42-27.01,8.32-35.86,14.71-8.85,6.38-14.11,13.43-15.79,21.15-1.68,7.71-2.52,20.85-2.52,39.39v31.58c0,19,.88,32.3,2.63,39.9,1.75,7.6,7.24,14.63,16.45,21.09,9.21,6.46,21.38,11.31,36.52,14.54,15.13,3.23,32.2,4.84,51.2,4.85h900v-1.17c20.03,0,37.58-1.71,52.64-5.13,15.06-3.42,27.01-8.32,35.86-14.71,8.84-6.38,14.11-13.43,15.79-21.15,1.68-7.71,2.52-20.84,2.52-39.39v-31.58c0-19-.88-32.3-2.63-39.9Z"/>
-        </svg>
+        <svg id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 888.62 191.05">
+          <path d="M885.99,40.22c-1.75-7.55-7.24-14.53-16.45-20.95-9.21-6.42-21.38-11.23-36.52-14.44-13.6-2.88-28.79-4.46-45.52-4.75v-.04h-3.86c-.61,0-1.21-.02-1.83-.02-1.23,0-2.45,0-3.67.02H112.5v.02c-1.88-.03-3.77-.06-5.69-.06-20.03,0-37.58,1.7-52.64,5.1-15.06,3.4-27.01,8.27-35.86,14.61-8.85,6.34-14.11,13.34-15.79,21.01-1.68,7.66-2.52,20.7-2.52,39.12v31.37c0,18.87.88,32.09,2.63,39.63,1.75,7.55,7.24,14.53,16.45,20.95,9.21,6.42,21.38,11.23,36.52,14.44,15.13,3.21,32.2,4.81,51.21,4.81,1.92,0,3.81-.02,5.69-.05h0s663.7.01,663.7.01c1.85.03,3.71.06,5.6.06,20.03,0,37.58-1.7,52.64-5.1,15.06-3.4,27.01-8.27,35.86-14.61,8.84-6.34,14.11-13.34,15.79-21.01,1.68-7.66,2.52-20.7,2.52-39.12v-31.37c0-18.87-.88-32.08-2.63-39.63Z"/>
+      </svg>
       </div>
       <div class="letter M-1">
         <svg id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 888.44 190.95">
