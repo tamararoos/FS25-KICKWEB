@@ -116,6 +116,7 @@
       .letter.N {
         grid-column: 1/4;
         grid-row: 1/2;
+        transition: all 1s ease;
       }
 
       .letter.N:hover path {
@@ -214,7 +215,12 @@
           "M220.73,32.14L253.36,0h635.08v190.95H313.98l-.17-23.84-49.41,23.84h-88.02l-52.16-23.84-.11,23.84H0V0h183.72"
         );
       }
+svg {
+width: 100%;
 
+  height: 100%;
+  fill: black;
+}
              /* Media Query für kleine Bildschirme */
              @media screen and (max-width: 640px) {
         .grid {
@@ -272,7 +278,7 @@
   <body>
     <div class="grid">
       <div class="letter N">
-        <svg id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 663.53 190.92">
+        <svg id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 663.53 190.92" preserveAspectRatio="none">
             <path d="M213.75,0v190.92h-83.91l-49.8-26.39v26.39H0V0h80.04l53.66,26.91V0h80.04Z"/>
         </svg>
       </div>
