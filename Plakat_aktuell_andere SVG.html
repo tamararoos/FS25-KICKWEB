@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: rgb(255, 238, 0);     
+        overflow: hidden;
+       }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 3px;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(255, 238, 0);
+      }
+
+      .letter {
+        opacity: 100;
+        display: flex;
+        transform: translateX(-50px) scale(1);
+        opacity: 0;
+        animation: fadeIn 1s forwards;
+        animation-delay: 0s;
+        align-items: center;
+        justify-content: center;
+        transform: scale(1, 1);
+      }
+
+ 
+
+      @keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+     /* Verzögerung für jeden Buchstaben */
+     .letter:nth-child(1) {
+        animation-delay: 0.5s;}
+
+      .letter:nth-child(2) {
+        animation-delay: 1s;
+      }
+      .letter:nth-child(3) {
+        animation-delay: 1.5s;
+      }
+      .letter:nth-child(4) {
+        animation-delay: 2s;
+      }
+      .letter:nth-child(5) {
+        animation-delay: 2.5s;
+      }
+      .letter:nth-child(6) {
+        animation-delay: 3s;
+      }
+      .letter:nth-child(7) {
+        animation-delay: 3.5s;
+      }
+      .letter:nth-child(8) {
+        animation-delay: 4s;
+      }
+      .letter:nth-child(9) {
+        animation-delay: 4.5s;
+      }
+      .letter:nth-child(10) {
+        animation-delay: 5s;
+      }
+  
+      .letter.N {
+        grid-column: 1/4;
+        grid-row: 1/2;
+        transition: all 1s ease;
+        transform: scale(1, 1);
+      }
+
+      .letter.N:hover path {
+        transition: all 1s ease;
+        transform: scale(3.2, 1);
+      }
+
+      .letter.O-1 {
+        grid-column: 4/9;
+        grid-row: 1/2;
+      }
+      .letter.O-1:hover path {
+        transition: all 1s ease;
+        transform: scale(5, 1);
+      }
+
+      .letter.M-1 {
+        grid-column: 1/5;
+        grid-row: 2/3;
+        /*scale: 0.8;*/
+        transition: all 1s ease;
+      }
+
+      .letter.M-1:hover path {
+        transition: all 1s ease;
+        transform: scale(2, 1);
+      }
+
+      .letter.O-2 {
+        grid-column: 5/9;
+        grid-row: 2/3;
+      }
+      .letter.O-2:hover path {
+        transition: all 1s ease;
+        transform: scale(4, 1);
+      }
+      .letter.R-1 {
+        grid-column: 1/3;
+        grid-row: 3/4;
+        transition: all 1s ease;
+      }
+
+      .letter.R-1:hover path {
+        transition: all 1s ease;
+        transform: scale(2, 1);
+      }
+
+      .letter.E-1 {
+        grid-column: 3/5;
+        grid-row: 3/4;
+        transition: all 1s ease;
+      }
+
+      .letter.E-1:hover path {
+        transition: all 1s ease;
+        transform: scale(2, 1);
+      }
+
+      .letter.R-2 {
+        grid-column: 5/7;
+        grid-row: 3/4;
+        /*scale: 0.8;*/
+        transition: all 1s ease;
+      }
+
+      .letter.R-2:hover path {
+        transition: all 1s ease;
+        transform: scale(2, 1);
+      }
+
+      .letter.O-3 {
+        grid-column: 7/9;
+        grid-row: 3/4;
+      }
+
+      .letter.O-3:hover path {
+        transition: all 1s ease;
+        transform: scale(2, 1);
+      }
+
+      .letter.O-4 {
+        grid-column: 1/5;
+        grid-row: 4/5;
+      }
+      .letter.O-4:hover path {
+        transition: all 1s ease;
+        transform: scale(4, 1);
+      }
+
+      .letter.M-2 {
+        grid-column: 5/9;
+        grid-row: 4/5;
+        transition: all 1s ease;
+        transform: scale(1, 1);
+      }
+
+      .letter.M-2:hover path {
+        transition: all 1s ease;
+        transform: scale(2, 1);
+      }
+
+svg {
+width: 100%;
+  height: 100%;
+  fill: black;
+  transform: scale(1, 1);
+}
+             /* Media Query für kleine Bildschirme */
+             @media screen and (max-width: 640px) {
+        .grid {
+          grid-template-columns: repeat(4, minmax(100px, 1fr));
+          grid-template-rows: repeat(8, minmax(90px, 1fr));
+        }
+
+        /* Beispielhafte Platzierungen */
+        .letter.N {
+          grid-column: 1/4;
+          grid-row: 1/2;
+        }
+        .letter.O-1 {
+          grid-column: 1/5;
+          grid-row: 2/3;
+        }
+        .letter.M-1 {
+          grid-column: 1/5;
+          grid-row: 3/4;
+        }
+        .letter.O-2 {
+          grid-column: 1/5;
+          grid-row: 4/5;
+        }
+        .letter.R-1 {
+          grid-column: 1/3;
+          grid-row: 5/6;
+        }
+        .letter.E-1 {
+          grid-column: 3/5;
+          grid-row: 5/6;
+        }
+        .letter.R-2 {
+          grid-column: 1/3;
+          grid-row: 6/7;
+        }
+        .letter.O-3 {
+          grid-column: 3/5;
+          grid-row: 6/7;
+        }
+        .letter.O-4 {
+          grid-column: 1/5;
+          grid-row: 7/8;
+        }
+        .letter.M-2 {
+          grid-column: 1/5;
+          grid-row: 8/9;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="letter N">
+        <svg id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 663.53 190.92" preserveAspectRatio="none">
+            <path d="M213.75,0v190.92h-83.91l-49.8-26.39v26.39H0V0h80.04l53.66,26.91V0h80.04Z"/>
+        </svg>
+      </div>
+      <div class="letter O-1">
+        <svg id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1113.61 193.5" preserveAspectRatio="none">
+            <path d="M213.62,111.2c0,18.42-.84,31.46-2.52,39.12-1.68,7.66-6.95,14.66-15.79,21.01-8.85,6.34-20.8,11.21-35.86,14.61-15.06,3.4-32.61,5.1-52.64,5.1s-36.08-1.6-51.21-4.81c-15.13-3.21-27.31-8.02-36.52-14.44-9.21-6.42-14.69-13.4-16.45-20.95-1.75-7.55-2.63-20.76-2.63-39.63v-31.37c0-18.42.84-31.46,2.52-39.12,1.68-7.66,6.94-14.66,15.79-21.01,8.85-6.34,20.8-11.21,35.86-14.61C69.23,1.7,86.77,0,106.81,0c19.01,0,36.08,1.6,51.21,4.81,15.13,3.21,27.31,8.02,36.52,14.44,9.21,6.42,14.69,13.4,16.45,20.95,1.75,7.55,2.63,20.76,2.63,39.63v31.37Z"/>
+        </svg>
+      </div>
+      <div class="letter M-1">
+        <svg id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 888.44 190.95" preserveAspectRatio="none">
+            <path d="M220.73,32.14L253.36,0h184.73v190.95h-124.11l-.17-23.84-49.41,23.84h-88.02l-52.16-23.84-.11,23.84H0V0h183.72"/>
+        </svg>
+      </div>
+      <div class="letter O-2">
+        <svg id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 888.62 191.05" preserveAspectRatio="none">
+          <path d="M213.62,111.2c0,18.42-.84,31.46-2.52,39.12-1.68,7.66-6.95,14.66-15.79,21.01-8.85,6.34-20.8,11.21-35.86,14.61-15.06,3.4-32.61,5.1-52.64,5.1s-36.08-1.6-51.21-4.81c-15.13-3.21-27.31-8.02-36.52-14.44-9.21-6.42-14.69-13.4-16.45-20.95-1.75-7.55-2.63-20.76-2.63-39.63v-31.37c0-18.42.84-31.46,2.52-39.12,1.68-7.66,6.94-14.66,15.79-21.01,8.85-6.34,20.8-11.21,35.86-14.61C69.23,1.7,86.77,0,106.81,0c19.01,0,36.08,1.6,51.21,4.81,15.13,3.21,27.31,8.02,36.52,14.44,9.21,6.42,14.69,13.4,16.45,20.95,1.75,7.55,2.63,20.76,2.63,39.63v31.37Z"/>
+      </svg>
+      </div>
+      <div class="letter R-1">
+        <svg id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 438.53 190.67" preserveAspectRatio="none">
+            <path d="M95.64,190.67H0V0h67.69c45.13,0,75.68.9,91.66,2.71,15.98,1.81,29,6.42,39.07,13.84,10.07,7.42,15.11,19.26,15.11,35.51,0,14.84-3.56,24.81-10.68,29.91-7.12,5.1-21.13,8.17-42.03,9.19,18.93,2.43,31.65,5.69,38.16,9.78,6.51,4.08,10.56,7.83,12.15,11.25s2.39,12.82,2.39,28.21v50.29h-88.82"/>
+        </svg>
+      </div>
+      <div class="letter E-1">
+        <svg id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 438.01 190.67" preserveAspectRatio="none">
+            <path d="M0,0h205.37v53.67h-82.21v6.31h76.94v67.35h-76.94v6.73h90.4v56.61H0V0Z"/>
+        </svg>
+      </div>
+      <div class="letter R-2">
+        <svg id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 438.53 190.67" preserveAspectRatio="none">
+          <path d="M95.64,190.67H0V0h67.69c45.13,0,75.68.9,91.66,2.71,15.98,1.81,29,6.42,39.07,13.84,10.07,7.42,15.11,19.26,15.11,35.51,0,14.84-3.56,24.81-10.68,29.91-7.12,5.1-21.13,8.17-42.03,9.19,18.93,2.43,31.65,5.69,38.16,9.78,6.51,4.08,10.56,7.83,12.15,11.25s2.39,12.82,2.39,28.21v50.29h-88.82"/>
+      </svg>
+      </div>
+      <div class="letter O-3">
+        <svg id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 438.62 191.03" preserveAspectRatio="none">
+          <path d="M213.62,111.2c0,18.42-.84,31.46-2.52,39.12-1.68,7.66-6.95,14.66-15.79,21.01-8.85,6.34-20.8,11.21-35.86,14.61-15.06,3.4-32.61,5.1-52.64,5.1s-36.08-1.6-51.21-4.81c-15.13-3.21-27.31-8.02-36.52-14.44-9.21-6.42-14.69-13.4-16.45-20.95-1.75-7.55-2.63-20.76-2.63-39.63v-31.37c0-18.42.84-31.46,2.52-39.12,1.68-7.66,6.94-14.66,15.79-21.01,8.85-6.34,20.8-11.21,35.86-14.61C69.23,1.7,86.77,0,106.81,0c19.01,0,36.08,1.6,51.21,4.81,15.13,3.21,27.31,8.02,36.52,14.44,9.21,6.42,14.69,13.4,16.45,20.95,1.75,7.55,2.63,20.76,2.63,39.63v31.37Z"/>
+      </svg>
+      </div>
+      <div class="letter O-4">
+        <svg id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 888.62 191.05" preserveAspectRatio="none">
+          <path d="M213.62,111.2c0,18.42-.84,31.46-2.52,39.12-1.68,7.66-6.95,14.66-15.79,21.01-8.85,6.34-20.8,11.21-35.86,14.61-15.06,3.4-32.61,5.1-52.64,5.1s-36.08-1.6-51.21-4.81c-15.13-3.21-27.31-8.02-36.52-14.44-9.21-6.42-14.69-13.4-16.45-20.95-1.75-7.55-2.63-20.76-2.63-39.63v-31.37c0-18.42.84-31.46,2.52-39.12,1.68-7.66,6.94-14.66,15.79-21.01,8.85-6.34,20.8-11.21,35.86-14.61C69.23,1.7,86.77,0,106.81,0c19.01,0,36.08,1.6,51.21,4.81,15.13,3.21,27.31,8.02,36.52,14.44,9.21,6.42,14.69,13.4,16.45,20.95,1.75,7.55,2.63,20.76,2.63,39.63v31.37Z"/>
+      </svg>
+      </div>
+      <div class="letter M-2">
+        <svg id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 888.44 190.95" preserveAspectRatio="none">
+          <path d="M220.73,32.14L253.36,0h184.73v190.95h-124.11l-.17-23.84-49.41,23.84h-88.02l-52.16-23.84-.11,23.84H0V0h183.72"/>
+      </svg>
+      </div>
+    </div>
+  </body>
+</html>
