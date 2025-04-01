@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plakatgrid</title>
+    <style>
+        .container {
+            display:grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr; 
+    height: 100vh;
+
+        }
+        .flex-item {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 10vw;
+            background-color: yellow;
+            border: red 3px solid;
+
+            display: flex; /* Flexbox aktivieren */
+    justify-content: center; /* Horizontal zentrieren */
+    align-items: center; /* Vertikal zentrieren */
+
+    width: 100%;  /* Dehnt das Element über die ganze Grid-Zelle */
+    height: 100%; /* Dehnt das Element über die ganze Grid-Zelle */
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="flex-item"></div>
+        <div class="flex-item"></div>
+        <div class="flex-item">N</div>
+        <div class="flex-item">O</div>
+        <div class="flex-item">M</div>
+        <div class="flex-item"></div>
+        <div class="flex-item"></div>
+        <div class="flex-item"></div>
+        <div class="flex-item">O</div>
+        <div class="flex-item"></div>
+        <div class="flex-item">R</div>
+        <div class="flex-item">E</div>
+        <div class="flex-item"></div>
+        <div class="flex-item">R</div>
+        <div class="flex-item">O</div>
+        <div class="flex-item">O</div>
+        <div class="flex-item"></div>
+        <div class="flex-item"></div>
+        <div class="flex-item">M</div>
+        <div class="flex-item"></div>
+
+       
+</body>
+</html>
