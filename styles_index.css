@@ -10,8 +10,9 @@ body {
     align-items: center;
     justify-content: center;
     background: white;
-    color: white;
+    color: rgb(255, 238, 0);
     min-height: 10vh;
+
 }
 .title {
     font-size: 32px;
