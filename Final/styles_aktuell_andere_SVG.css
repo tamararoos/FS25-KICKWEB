@@ -50,7 +50,7 @@ body {
 }
 
 .letter.N:hover path {
-  transform: scale(3.2, 1);
+  transform: scale(4, 1);
 }
 
 .letter.O-1 {

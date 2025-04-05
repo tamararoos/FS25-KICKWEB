@@ -9,54 +9,50 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     background-color: rgb(255, 238, 0);
-    min-height: 10vh;
 }
-.title {
-    font-size: 60px;
+.Titel {
+    font-size: 50px;
     font-weight: bold;
     text-align: center;
     padding: 30px;
     color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-
-main {
+div {
     width: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
-    padding: 30px;
+    gap: 25px;
+
 }
 
-.content-box {
-    width: 100%;
-    height: 25vh;
-    background: white;
+.Rahmen {
+    width: 60vw;
+    height: 100px;
+    background: rgb(255, 238, 0);
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
     text-align: center;
-    font-size: 20px;
     transition: 0.3s ease-in-out;
-    border: 10px solid black;
+    border-radius: 60px;
+    border: 7px solid black;
     color: black;
+    font-size: 30px;
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.content-box:hover {
+/* Hover-Effekt */
+.Rahmen:hover {
     background: rgb(0, 0, 0);
-    transform: scale(1.4,1);
-    border-color: rgb(255, 255, 255); /* Hover-Effekt */
-    color:rgb(255, 238, 0);
+    transform: scale(150%, 110%);
+    color: rgb(255, 238, 0);
 }
 
 a {
     text-decoration: none;
-    width: 100%;
-    display: flex;
-    justify-content: center;
 }
-
