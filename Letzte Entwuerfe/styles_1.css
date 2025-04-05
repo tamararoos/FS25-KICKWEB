@@ -23,46 +23,14 @@ body {
   animation-delay: 0s;
   align-items: center;
   justify-content: center;
+  transition: transform 0.3s ease-in-out;
+  
+  
 }
 .letter path {
     transition: transform 0.3s ease-in-out;
     transform-origin: left;
   }
-
-.Objekt {
- width: 200px;
-height: 200px;
-border-radius: 30%;
-background-color: black;
-opacity: 100;
-display: flex;
-animation: fadeIn 1s forwards;
-animation-delay: 0s;
-align-items: center;
-justify-content: center;
-grid-column: 4/5;
-grid-row: 1/2;
-place-self: center; /* Zentriert das Objekt innerhalb der Grid-Zelle */
-
-}
-.Objekt :hover{
-transition: all 1s ease; 
-transform: scale(1.2);
- width: 200px;
-height: 200px;
-border-radius: 30%;
-background-color: black;
-opacity: 100;
-display: flex;
-animation: fadeIn 1s forwards;
-animation-delay: 0s;
-align-items: center;
-justify-content: center;
-grid-column: 4/5;
-grid-row: 1/2;
-place-self: center; /* Zentriert das Objekt innerhalb der Grid-Zelle */
-
-}
 
 
 @keyframes fadeIn {

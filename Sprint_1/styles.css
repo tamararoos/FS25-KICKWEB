@@ -1,0 +1,100 @@
+*
+.grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows:1fr 1fr 1fr 1fr 1fr;
+
+    width: 100vw;
+    background-color: rgb(255, 238, 0);
+}
+.letter.M{
+    grid-row:2/3;
+    grid-column:1/5;
+    /*scale: 0.8;*/
+    transition: all 1s ease;
+}
+
+.letter.M:hover path{
+    transition: 1s ;
+     d: path("M63.72,13.61L73.7,0h401.58v99.61H91.34v-14.39s-14.42,14.39-14.42,14.39h-25.61l-15.2-12.43v12.43H0V0h53.44");
+}
+
+.letter.N{
+    grid-row:1/2;
+    grid-column:1/5;
+    transition: all 1s ease;
+}
+
+.letter.N:hover path{
+    transition: 1s ;
+     d: path("M260.47,0v99.61h-36.44l-21.62-14.13v14.13H0V0h202.4l23.34,10.92-.04-10.92h34.76Z");
+}
+
+.letter.O{
+    grid-row: 1/2;
+    grid-column: 4/5;
+}
+
+.letter.O-2{
+    grid-row: 3/4;
+    grid-column: 1/2;
+}
+
+.letter.O-3{
+    grid-row: 4/5;
+    grid-column: 3/4;
+}
+
+.letter.O-4{
+    grid-row: 4/5;
+    grid-column: 4/5;
+}
+
+.letter.E{
+    grid-row: 3/4;
+    grid-column: 4/5;
+}
+
+.letter.M-2{
+    grid-row:5/6;
+    grid-column:1/5;
+    /*scale: 0.8;*/
+    transition: all 1s ease;
+}
+
+.letter.M-2:hover path{
+    transition: 1s ;
+     d: path("M63.72,13.61L73.7,0h401.58v99.61H91.34v-14.39s-14.42,14.39-14.42,14.39h-25.61l-15.2-12.43v12.43H0V0h53.44");
+}
+
+.letter.R{
+    grid-row:3/4;
+    grid-column:2/4;
+    scale: 0.95;
+    translate: 0px -6px;
+    transition: all 1s ease;
+}
+
+.letter.R:hover path{
+    transition: 1s ;
+     d: path("M121.67,98.82H0V0h110.32c18.32,0,30.72.47,37.21,1.4,6.49.94,11.77,3.33,15.86,7.17,4.09,3.84,6.13,9.98,6.13,18.4,0,7.69-1.45,12.86-4.33,15.5-2.89,2.65-8.58,4.23-17.06,4.76,7.68,1.26,12.85,2.95,15.49,5.07,2.64,2.12,4.29,4.06,4.93,5.83.64,1.77.97,6.64.97,14.62v26.06h-47.86");
+}
+
+.letter.R-2{
+    grid-row:4/5;
+    grid-column:1/3;
+    scale: 0.95;
+    translate: 0px -6px;
+    transition: all 1s ease;
+}
+
+.letter.R-2:hover path{
+    transition: 1s ;
+     d: path("M121.67,98.82H0V0h110.32c18.32,0,30.72.47,37.21,1.4,6.49.94,11.77,3.33,15.86,7.17,4.09,3.84,6.13,9.98,6.13,18.4,0,7.69-1.45,12.86-4.33,15.5-2.89,2.65-8.58,4.23-17.06,4.76,7.68,1.26,12.85,2.95,15.49,5.07,2.64,2.12,4.29,4.06,4.93,5.83.64,1.77.97,6.64.97,14.62v26.06h-47.86");
+}
+
+/*body {
+margin: 0;
+background-color: rgb(255, 238, 0);
+}*/
+
